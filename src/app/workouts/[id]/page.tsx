@@ -1,3 +1,5 @@
+import AddButton from "@/components/workDetails/AddButton";
+import SaveButton from "@/components/workDetails/SaveButton";
 import { IWorkout } from "@/types/work.type";
 import Image from "next/image";
 import React from "react";
@@ -29,8 +31,8 @@ const WorkDetailsPage = async ({ params }: IWorkDetailsPageProps) => {
           <Image
             src={work.image}
             alt={work.name}
-            width={500}
-            height={300}
+            width={300}
+            height={200}
             className="h-full w-full object-cover"
           />
         </figure>
@@ -91,10 +93,8 @@ const WorkDetailsPage = async ({ params }: IWorkDetailsPageProps) => {
           </div>
 
           <div className="card-actions justify-end">
-            <button className="btn bg-[#CCFF00] text-black font-medium">
-              Add to today’s plan
-            </button>
-            <button className="btn btn-outline">Save for later</button>
+            <AddButton work={work} />
+            <SaveButton work={work} />
           </div>
         </div>
       </div>
