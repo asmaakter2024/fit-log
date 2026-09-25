@@ -18,7 +18,7 @@ const Navbar = () => {
         <ul className="menu menu-horizontal items-center gap-1 p-0">
           <li>
             <Link
-              href="/#library"
+              href="/workouts"
               className="rounded-full bg-lime-400/10 px-4 py-2 text-xs font-semibold text-lime-300"
             >
               Workouts
@@ -26,7 +26,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href="/my-plan"
+              href="/myplan"
               className="rounded-full px-4 py-2 text-xs font-semibold text-zinc-400 hover:text-white"
             >
               My Plan
