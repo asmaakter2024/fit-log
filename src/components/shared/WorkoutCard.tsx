@@ -1,7 +1,12 @@
+import { IWorkout } from "@/types/work.type";
 import Image from "next/image";
 import React from "react";
 
-const WorkoutCard = ({ work }) => {
+interface IWorkCardProps {
+  work: IWorkout;
+}
+
+const WorkoutCard = ({ work }: { IWorkCardProps }) => {
   return (
     <article className="overflow-hidden rounded-2xl border border-white/10 bg-[#191a21] transition hover:-translate-y-1 hover:border-lime-400/50">
       <Image

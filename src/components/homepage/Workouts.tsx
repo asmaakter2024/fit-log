@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import WorkoutCard from "../shared/WorkoutCard";
+import { IWorkout } from "@/types/work.type";
 
 const getWorkouts = async () => {
   const response = await fetch("https://api.abcz.workers.dev/api/fitlog");
@@ -22,7 +23,7 @@ const Workouts = async () => {
       </header>
 
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {workOutData.map((work, ind) => {
+        {workOutData.map((work: IWorkout, ind: number) => {
           return <WorkoutCard key={ind} work={work} />;
         })}
       </div>
