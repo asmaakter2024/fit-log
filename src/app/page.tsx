@@ -6,7 +6,7 @@ const page = () => {
   return (
     <div>
       <Banner />
-      <Workouts/>
+      <Workouts />
     </div>
   );
 };
